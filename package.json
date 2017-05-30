@@ -1,0 +1,21 @@
+{
+  "name": "check_for_locked_files",
+  "version": "1.0.0",
+  "description": "Check for locked files on a Windows network",
+  "main": "checkforlockedfiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server wwwroot -p 80 -c-1",
+    "watch": "powershell bin\\checkforlocks.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/dkurman/check_for_locked_files.git"
+  },
+  "author": "Dave Kurman",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dkurman/check_for_locked_files#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}

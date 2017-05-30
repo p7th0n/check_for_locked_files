@@ -1,0 +1,36 @@
+{                                                     
+    "readme": [                                       
+        {                                             
+            "Path": "E:\\VMs\\Dave\\README.md",       
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        },                                            
+        {                                             
+            "Path": "E:\\VMS\\DAVE\\README.RTF",      
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        }                                             
+    ],                                                
+    "first": [                                        
+        {                                             
+            "Path": "E:\\VMs\\Dave\\first-last.txt",  
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        },                                            
+        {                                             
+            "Path": "E:\\VMs\\Dave\\first.txt",       
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        },                                            
+        {                                             
+            "Path": "E:\\VMs\\Dave\\first-last.txt",  
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        },                                            
+        {                                             
+            "Path": "E:\\VMs\\Dave\\first.txt",       
+            "ClientUserName": "HYPERVMGMT\\dave",     
+            "ClientComputerName": "192.168.1.5"       
+        }                                             
+    ]                                                 
+}                                                     

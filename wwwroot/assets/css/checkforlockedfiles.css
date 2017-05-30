@@ -1,0 +1,83 @@
+/* css */
+
+body {
+    font-family: arial;
+    clear: both;
+    width: 950px;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #aaa;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+    /*background-image: url("checkforlockedfiles.gif");
+    background-repeat: no-repeat;
+    background-position: center;*/
+    /*filter: alpha(opacity=25);*/
+}
+h3 {
+    color: #777;
+}
+hr {
+    clear: both;
+}
+ul {
+    min-height: 300px;
+}
+li {
+    line-height: 1.8;
+    clear: both;
+    list-style: none;
+    margin: 0;
+    left: 0;
+}
+.content {
+    background-image: url("/assets/img/checkforlockedfiles.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 128px;
+}
+.div-watched {
+    font-weight: bold;
+    float: left;
+    width: 550px;
+    padding: 4px;
+    margin: 2px;
+    background-color: #eee;
+}
+.div-path {
+    /*display: inline;*/
+    float: left;
+    width: 590px;
+    padding: 4px;
+    margin: 2px;
+    background-color: rgba(200,200,200, .8);
+}
+.div-user {
+    /*display: inline;*/
+    float: left;
+    width: 130px;
+    padding: 4px;
+    margin: 2px;
+    background-color: rgba(200,200,200, .8);
+}
+.div-computer {
+    /*display: inline;*/
+    float: left;
+    width: 125px;
+    padding: 4px;
+    margin: 2px;
+    background-color: rgba(200,200,200, .8);
+}
+.head-row {
+    font-weight: bold;
+    color: #fdd;
+    background-color: rgba(0,0,0, .8);
+}
+.footer {
+    color: #fff;
+    background-color: #aaa;
+    text-align: center;
+    font-size: 24pt;
+    margin: 0;
+    padding: 4px;
+}
