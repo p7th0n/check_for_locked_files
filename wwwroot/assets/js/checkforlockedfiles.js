@@ -15,7 +15,7 @@ const DELAY = 10000;
  * @param {*} error - function on error
  * @returns {void}
  */
-function loadJSON(path, success, error) {
+var loadJSON = function(path, success, error) {
     var xhr = new XMLHttpRequest();
 
 
@@ -45,14 +45,16 @@ function loadJSON(path, success, error) {
  * @param {*} xhr request object
  * @returns {void}
  */
-function handleXhrError(xhr) {
+var handleXhrError = function(xhr) {
+    // Handle error
+    console.log('xhr error: ', xhr);
 }
 
 /**
  * updates time stamp on web page
  * @returns {void}
  */
-function updateTimeStamp() {
+var updateTimeStamp = function() {
     var lastScanned = document.getElementById('last-scanned');
     var now = new Date().toLocaleString();
 
@@ -66,7 +68,7 @@ function updateTimeStamp() {
  * @param {*} data data returned from JSON
  * @returns {void}
  */
-function updateList(data) {
+var updateList = function(data) {
     // console.log('updateList: ', data);
     var index = 0;
     var keys = Object.keys(data);
@@ -143,7 +145,7 @@ function fetchData() {
  * @returns {void}
  */
 (function () {
-    // console.log('Ready');
+    console.log('Ready');
 
     // updateTimeStamp();
     fetchData();
