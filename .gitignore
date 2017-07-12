@@ -2,3 +2,6 @@
 
 .vscode/*.sql
 node_modules
+
+
+wwwroot/assets/data/output.json

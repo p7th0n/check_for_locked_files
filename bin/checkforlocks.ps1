@@ -18,22 +18,24 @@ Do {
     $listLength = $watchList.watchlist.Count
 
     foreach ($item in $watchList.watchlist) {
-        Write-Host -NoNewLine "`nChecking for locked files matching: ["$item"]`n`n"
+        Write-Host "===================================================================================================="
+        Write-Host "`t`t`t`tChecking for locked files matching: ["$item"]"
+        Write-Host "===================================================================================================="
         # For each item in the watch list check if any are opened and output to JSON format
-        $matchOutput = Get-SmbOpenFile | Select-Object -Property Path, ClientUserName, ClientComputerName | Where-Object -Property Path -Match "$item" | ConvertTo-Json
+        $matchOutput = Get-SmbOpenFile | Select-Object -Property ShareRelativePath, ClientUserName, ClientComputerName | Where-Object -Property ShareRelativePath -Match "$item" | ConvertTo-Json
 
         # If nothing is open for the watched item output JSON with none
         IF ($matchOutput -eq $null) {
-            $matchOutput = "[{`n`t`"Path`": `"none`",`n`t`"ClientUserName`": `"none`",`n`t`"ClientComputerName`": `"none`"}]"
+            $matchOutput = "[{`n`t`"ShareRelativePath`": `"none`",`n`t`"ClientUserName`": `"none`",`n`t`"ClientComputerName`": `"none`"}]"
         }
 
         # Write-Host "`nmatchOutput: "($matchOutput[0] -ne $null) $matchOutput 
         $outputType = ConvertFrom-Json -InputObject $matchOutput
         if ($outputType -isnot [System.array]){
-            Write-Host "`ntype: "$outputType.GetType() ($outputType -isnot [System.array])"`n"
-            Write-Host "item: "$item"`n"
+            # Write-Host "`ntype: "$outputType.GetType() ($outputType -isnot [System.array])"`n"
+            # Write-Host "item: "$item"`n"
             $matchOutput = "[" + $matchOutput + "]"
-            Write-Host "matchOutput: "$matchOutput"`n"
+            # Write-Host "matchOutput: "$matchOutput"`n"
         }
 
         # If this is last item in watch list do not use a comma for the JSON output
@@ -49,7 +51,9 @@ Do {
 
     $stringBuilder.ToString() | Out-File $outputJson
     # Write-Output $stringBuilder.ToString()
-    Write-Host 'Wait...'
+    Write-Host "`n===================================================================================================="
+    Write-Host "`t`t`t`t[[[[[[[[[[ Check for Locked Files: Wait...]]]]]]]]]]"
+    Write-Host "===================================================================================================="
 
     Start-Sleep 10
 } While ($TRUE)

@@ -81,3 +81,42 @@ li {
     margin: 0;
     padding: 4px;
 }
+.watch-list-head {
+    cursor: pointer;
+    color: #555;
+    padding: 8px;
+    border: 1px solid #fff;
+}
+.watch-list-head:hover {
+    color: #b00;
+    background-color: #ddd;
+    border: 1px solid #777;
+}
+#watch-list-ul {
+    background-color: #fff;
+    padding: 12px;
+    top: 60px;
+    min-height: 20px;
+    border: 1px solid #777;
+    box-shadow: 3px 3px 4px #777;
+    position: absolute;
+    transition: all 500ms linear;
+}
+#watch-list-ul li {
+    color: #000;
+    font-size: 12pt;
+    margin-left: 0;
+    padding: 4px;
+}
+.hide {
+    opacity: 0;
+}
+.show {
+    opacity: 100%;
+}
+.remove {
+    height: 0;
+}
+.add {
+    height: auto;
+}
