@@ -24,7 +24,6 @@ var loadJSON = function (path, success, error) {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === READY) {
                 if (success) {
-                    console.log('data xhr', Object.keys(JSON.parse(xhr.response)));
                     success(JSON.parse(xhr.responseText));
                     if (xhr.getResponseHeader('Last-Modified')) {
                         var lastChanged = document.getElementById('last-changed');
@@ -40,38 +39,6 @@ var loadJSON = function (path, success, error) {
     xhr.open('GET', path, true);
     xhr.send();
 }
-
-/**
- * loads watched JSON data
- * @param {*} path  - location of JSON file
- * @param {*} success - function on success
- * @param {*} error - function on error
- * @returns {void}
- */
-var loadWatchedJSON = function (path, success, error) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === READY) {
-                if (success) {
-                    console.log('watched xhr', Object.keys(JSON.parse(xhr.response)));
-                    success(JSON.parse(xhr.responseText));
-                    if (xhr.getResponseHeader('Last-Modified')) {
-                        var lastChanged = document.getElementById('last-changed');
-
-                        lastChanged.innerHTML = 'Last changed: ' + new Date(xhr.getResponseHeader('Last-Modified')).toLocaleString();
-                    }
-                }
-            } else if (error) {
-                handleXhrError(xhr);
-            }
-        }
-    };
-    xhr.open('GET', path, true);
-    xhr.send();
-}
-
 
 /**
  * handle error
@@ -80,7 +47,6 @@ var loadWatchedJSON = function (path, success, error) {
  */
 var handleXhrError = function (xhr) {
     // Handle error
-    console.log('xhr error: ', xhr);
 }
 
 /**
@@ -102,13 +68,11 @@ var updateTimeStamp = function () {
  * @returns {void}
  */
 var updateList = function (data) {
-    console.log('updateList data: ', data);
     var index = 0;
     var keys = Object.keys(data);
     var ul = document.getElementById('locked-list');
     var liHead = document.createElement('li');
 
-    // console.log('keys: ', keys);
 
     var divPathHead = document.createElement('div');
     var divUserHead = document.createElement('div');
@@ -167,14 +131,11 @@ var updateList = function (data) {
  * @returns {void}
  */
 var updateWatched = function (data) {
-    console.log('updateWatched watched: ', data);
     var index = 0;
     var keys = data.watchList;
     var ul = document.getElementById('watch-list-ul');
     var liHead = document.createElement('li');
     var divHead = document.createElement('div');
-
-    // console.log('watched list keys: ', keys, keys.length > ZERO);
 
     ul.innerHTML = '';
     divHead.appendChild(document.createTextNode('Watched Items'));
@@ -183,7 +144,6 @@ var updateWatched = function (data) {
     ul.appendChild(liHead);
 
     keys.forEach(function (element) {
-        // console.log('watchedItem: ', element);
         var li = document.createElement('li');
         var divWatchedItem = document.createElement('div');
 
@@ -204,7 +164,7 @@ function fetchData() {
         updateList,
         handleXhrError);
 
-    loadWatchedJSON(WATCHED_JSON,
+    loadJSON(WATCHED_JSON,
         updateWatched,
         handleXhrError);
 }
@@ -214,8 +174,6 @@ function fetchData() {
  * @returns {void}
  */
 (function () {
-    console.log('Ready');
-
     fetchData();
 
     setInterval(fetchData, DELAY);
@@ -227,22 +185,18 @@ window.onload = function () {
     var watchedHead = document.getElementsByClassName('watch-list-head')[ZERO];
 
     watchedHead.addEventListener('mouseover', function () {
-        // ul.style.visibility = 'visible';
         ul.className = '';
         ul.classList.add('add');
         setTimeout(function () {
             ul.classList.add('show');
 
-            console.log('fade', ul.classList);
         }, FADE);
     });
     watchedHead.addEventListener('mouseout', function () {
-        // ul.style.visibility = 'hidden';
         ul.className = '';
         ul.classList.add('hide');
         setTimeout(function () {
             ul.classList.add('remove');
-            console.log('fade', ul.classList);
         }, FADE);
     });
 }
