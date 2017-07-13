@@ -13,6 +13,8 @@ This tool has two parts:
 * A watcher that checks for locked files. The watcher uses a search list for _watched_ files and folders.
 * A web server that displays the locked files and who locked them. No need for special access. Just check a web page.
 
+**Demo** -- [https://p7th0n.github.io/check_for_locked_files/](https://p7th0n.github.io/check_for_locked_files/)
+
 ## Quick setup
 
 * Clone or download and extract this repo to a folder on the file server.
