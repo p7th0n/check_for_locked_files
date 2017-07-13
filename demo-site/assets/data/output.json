@@ -1,0 +1,53 @@
+﻿{
+	"README":[{
+	"ShareRelativePath": "none",
+	"ClientUserName": "none",
+	"ClientComputerName": "none"}], 
+	"dave":[
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents\\backbone-fundamentals.pdf",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents\\Peter Naur – Programming as Theory Building.pdf",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents\\git\\check_for_locked_files",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    },
+    {
+        "ShareRelativePath":  "Users\\Dave\\Documents\\git\\check_for_locked_files",
+        "ClientUserName":  "dave@example.com",
+        "ClientComputerName":  "[DesktopPC01]"
+    }
+], 
+	"checkforlocks":[{
+	"ShareRelativePath": "none",
+	"ClientUserName": "none",
+	"ClientComputerName": "none"}]
+}
+
