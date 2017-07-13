@@ -9,10 +9,6 @@ body {
     margin-right: auto;
     border: 1px solid #aaa;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-    /*background-image: url("checkforlockedfiles.gif");
-    background-repeat: no-repeat;
-    background-position: center;*/
-    /*filter: alpha(opacity=25);*/
 }
 h3 {
     color: #777;
@@ -31,7 +27,7 @@ li {
     left: 0;
 }
 .content {
-    background-image: url("/assets/img/checkforlockedfiles.gif");
+    background-image: url("/check_for_locked_files/assets/img/checkforlockedfiles.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 128px;
@@ -40,12 +36,7 @@ li {
 }
 #locked-list li {
     height: 35px;
-    /* border: 1px solid #000; */
 }
-/* #locked-list li:hover {
-    background-color: #d99;
-    cursor: pointer;
-} */
 .div-watched {
     font-weight: bold;
     float: left;
@@ -65,7 +56,6 @@ li {
     cursor: pointer;
 }
 .div-user {
-    /*display: inline;*/
     float: left;
     width: 130px;
     padding: 4px;
@@ -73,7 +63,6 @@ li {
     background-color: rgba(200,200,200, .8);
 }
 .div-computer {
-    /*display: inline;*/
     float: left;
     width: 125px;
     padding: 4px;
