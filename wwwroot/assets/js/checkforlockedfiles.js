@@ -5,8 +5,10 @@ const WATCHED_JSON = '/assets/data/watchlist.json';
 const READY = 200;
 const ONE = 1;
 const ZERO = 0;
+const MINUS_ONE = -1;
 const TRUNCATED_LENGTH = 12;
 const ONE_SECOND = 1000;
+const FIVE_SECONDS = 5000;
 const DELAY = 10000;
 const FADE = 500;
 
@@ -116,6 +118,7 @@ var updateList = function (data) {
                     li.appendChild(divPath);
                     li.appendChild(divUser);
                     li.appendChild(divComputer);
+                    li.setAttribute('title', '  ' + element.ShareRelativePath + '  ');
                     ul.appendChild(li);
                 }
             });
@@ -183,7 +186,11 @@ window.onload = function () {
     //
     var ul = document.getElementById('watch-list-ul');
     var watchedHead = document.getElementsByClassName('watch-list-head')[ZERO];
+    var lockedLi = document.getElementById('locked-list').getElementsByTagName('li');
+    var lockedListUl = document.getElementById('locked-list');
+    var lockedItemPath = document.getElementById('locked-item-path');
 
+    // show watched items
     watchedHead.addEventListener('mouseover', function () {
         ul.className = '';
         ul.classList.add('add');

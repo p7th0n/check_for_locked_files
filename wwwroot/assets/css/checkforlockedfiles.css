@@ -36,6 +36,16 @@ li {
     background-position: center;
     background-size: 128px;
 }
+#locked-list {
+}
+#locked-list li {
+    height: 35px;
+    /* border: 1px solid #000; */
+}
+/* #locked-list li:hover {
+    background-color: #d99;
+    cursor: pointer;
+} */
 .div-watched {
     font-weight: bold;
     float: left;
@@ -45,12 +55,14 @@ li {
     background-color: #eee;
 }
 .div-path {
-    /*display: inline;*/
     float: left;
     width: 590px;
     padding: 4px;
     margin: 2px;
     background-color: rgba(200,200,200, .8);
+}
+.div-path:hover {
+    cursor: pointer;
 }
 .div-user {
     /*display: inline;*/
@@ -107,6 +119,7 @@ li {
     font-size: 12pt;
     margin-left: 0;
     padding: 4px;
+    transition: all 500ms linear;
 }
 .hide {
     opacity: 0;
