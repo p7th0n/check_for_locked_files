@@ -18,9 +18,11 @@ This tool has two parts:
 ## Quick setup
 
 * Clone or download and extract this repo to a folder on the file server.
-* Make sure [NodeJS](https://nodejs.org/en/) and npm are installed and on the PATH.  Open a command line to the repo location and run **npm install** to initialize.
-* From the same command line start the web server - **npm start**.  By default it runs on port 80 so if that is a problem edit _package.json_ _scripts/start_.  Visit [http://fileserver-name](http://fileserver-name/).
-* In a separate command line start File lock watcher - **npm run watch** [requires _**Administrator**_ privledges]
+* Install [NodeJS](https://nodejs.org/en/) and npm if not installed.
+* Open a command prompt at the repo location and run **npm install** to install **http-server**.
+* Run **npm start** to start the webserver.  By default it runs on **port 80** so if that is a problem edit _package.json_ _scripts/start_.  
+* Open [http://fileserver-name](http://fileserver-name/) to watch for locked files.
+* In a separate command prompt start the watcher - **npm run watch** [requires _**Administrator**_ privledges]
 
 ![Screenshot](./wwwroot/assets/img/check-lock-files-screenshot.png)
 
@@ -29,7 +31,7 @@ This tool has two parts:
 * Open _**wwwroot/assets/data/watchlist.json**_
 * Add, remove or edit items in the watchList array.
 * Save changes.
-* The watcher reads _watchlist.json_ on each cycle so there's no need to restart the watcher script.
+* The watcher reads _watchlist.json_ on each cycle so there's no need to restart the Powershell watcher process.
 
 ```json
 
@@ -43,7 +45,8 @@ This tool has two parts:
 
 ```
 
-## Summary of set up
+## Summary
 
-* File server watcher - this Powershell process requires administrator privledges on the Windows file server.
-* Web server - the NodeJS simple http-server shows the web page. Microsoft IIS can also host the web page.  Be sure that IIS doesn't cache the content; especially _./assets/data/output.json_.
+* File server watcher - the Powershell process requires administrator privileges on the Windows file server.
+* Web server - the NodeJS http-server serves the web page. 
+* TODO - Microsoft IIS can also host the web page.  The setup steps are coming soon.

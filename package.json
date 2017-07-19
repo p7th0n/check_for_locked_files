@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/dkurman/check_for_locked_files.git"
+    "url": "https://github.com/p7th0n/check_for_locked_files.git"
   },
   "author": "Dave Kurman",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/dkurman/check_for_locked_files#readme",
+  "homepage": "https://github.com/p7th0n/check_for_locked_files",
   "dependencies": {
     "http-server": "^0.10.0"
   }
