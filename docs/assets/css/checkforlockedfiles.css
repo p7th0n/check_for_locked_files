@@ -27,7 +27,7 @@ li {
     left: 0;
 }
 .content {
-    background-image: url("/assets/img/checkforlockedfiles.gif");
+    background-image: url("/check_for_locked_files/docs/assets/img/checkforlockedfiles.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 128px;
