@@ -2,11 +2,10 @@
 
 const DATA_JSON = '/assets/data/output.json';
 
-
     /* Simulate updating scans */
 
-const DATA_JSON1 = '/check_for_locked_files/docs/assets/data/output1.json';
-const DATA_JSON2 = '/check_for_locked_files/docs/assets/data/output2.json';
+const DATA_JSON1 = '/check_for_locked_files/assets/data/output1.json';
+const DATA_JSON2 = '/check_for_locked_files/assets/data/output2.json';
 const DATA_ARRAY = [DATA_JSON, DATA_JSON1, DATA_JSON2];
 const ARRAY_COUNT = 3;
 var DATA_NUM = 0;
