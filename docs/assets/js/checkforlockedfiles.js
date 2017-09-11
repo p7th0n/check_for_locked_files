@@ -1,7 +1,19 @@
 // checkforlockedfiles.js
 
-const DATA_JSON = '/check_for_locked_files/assets/data/output.json';
-const WATCHED_JSON = '/check_for_locked_files/assets/data/watchlist.json';
+const DATA_JSON = '/assets/data/output.json';
+
+
+    /* Simulate updating scans */
+
+const DATA_JSON1 = '/assets/data/output1.json';
+const DATA_JSON2 = '/assets/data/output2.json';
+const DATA_ARRAY = [DATA_JSON, DATA_JSON1, DATA_JSON2];
+const ARRAY_COUNT = 3;
+var DATA_NUM = 0;
+
+    /* Simulate updating scans */
+
+const WATCHED_JSON = '/assets/data/watchlist.json';
 const READY = 200;
 const ONE = 1;
 const ZERO = 0;
@@ -163,7 +175,12 @@ var updateWatched = function (data) {
  * @returns {void}
  */
 function fetchData() {
-    loadJSON(DATA_JSON,
+
+    /* Simulate updating scans */
+
+    DATA_NUM = (DATA_NUM + ONE) % ARRAY_COUNT;
+
+    loadJSON(DATA_ARRAY[DATA_NUM],
         updateList,
         handleXhrError);
 

@@ -1,0 +1,69 @@
+﻿{
+    "README": [
+        {
+            "ShareRelativePath": "none",
+            "ClientUserName": "none",
+            "ClientComputerName": "none"
+        }
+    ],
+    "dave": [
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\cover-letter.docx",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\job-search-log.xlsm",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\README.md",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\resume.md",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\resume.docx",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\git\\check_for_locked_files",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        },
+        {
+            "ShareRelativePath": "Users\\Dave\\Documents\\git\\check_for_locked_files",
+            "ClientUserName": "dave@example.com",
+            "ClientComputerName": "[DesktopPC01]"
+        }
+    ],
+    "checkforlocks": [
+        {
+            "ShareRelativePath": "none",
+            "ClientUserName": "none",
+            "ClientComputerName": "none"
+        }
+    ]
+}
