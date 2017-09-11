@@ -1,6 +1,6 @@
 // checkforlockedfiles.js
 
-const DATA_JSON = '/assets/data/output.json';
+const DATA_JSON = '/check_for_locked_files/assets/data/output.json';
 
     /* Simulate updating scans */
 
@@ -12,7 +12,7 @@ var DATA_NUM = 0;
 
     /* Simulate updating scans */
 
-const WATCHED_JSON = '/assets/data/watchlist.json';
+const WATCHED_JSON = '/check_for_locked_files/assets/data/watchlist.json';
 const READY = 200;
 const ONE = 1;
 const ZERO = 0;
